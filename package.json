@@ -1,5 +1,16 @@
 {
-  "devDependencies": {
-    "electron": "^21.1.0"
-  }
+	"name": "mine-tools",
+	"scripts": {
+		"start": "cross-env NODE_ENV=dev electron .",
+		"build": "electron-packager . MineTools --platform=win32 --out dist --arch=x64 --electron-version 21.1.0 --overwrite --ignore=node_modules",
+		"buildWin": "electron-packager . MineTools --platform=win32 --out dist --arch=x64 --electron-version 21.1.0 --overwrite --ignore=node_modules",
+		"buildMac": "electron-packager . MineTools --platform=darwin --out dist --arch=x64 --electron-version 21.1.0 --overwrite --ignore=node_modules",
+		"buildLinux": "electron-packager . MineTools --platform=linux --out dist --arch=x64 --electron-version 21.1.0 --overwrite --ignore=node_modules"
+	},
+	"version": "0.0.1",
+	"main": "window.js",
+	"devDependencies": {
+		"cross-env": "^7.0.3",
+		"electron": "^21.1.0"
+	}
 }
